@@ -1,0 +1,19 @@
+<h1>Bottoms Up</h1>
+
+<p> We have established I'm a complete nerd, but I'm also a total basic bitch. I love me some starbucks &#9749 and some Swig &#129380. Tell me your favorite drink order to add my list of drinks to try!</p>
+
+<h2>FAVORITE DRINK ORDER</h2>
+<br>
+<form action="/drinks" method="post">
+  <label for="drinks">Favorite Drink:</label><br>
+  <input type="text" id="drinks" name="drink" placeholder="Enter your drink!"><br>
+  <label for="nametag">Name:</label><br>
+  <input type="text" id="nametag" name="nametag" placeholder="Own that sh*t">
+  <button type="submit">Submit</button>
+</form>
+
+<ul>
+{{#each drinks}}
+  <li>{{this.drink}} - {{this.nametag}}</li>
+  {{/each}}
+</ul>
